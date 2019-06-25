@@ -177,7 +177,7 @@ fn db_with_cli_with_env() -> Result<(), Box<std::error::Error>> {
     Ok(())
 }
 
-/*#[test] // 3.1
+#[test] // 3.1
 fn init_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
@@ -259,7 +259,7 @@ fn init_with_valid_seed_file_cli_override_env() -> Result<(), Box<std::error::Er
     Ok(())
 }
 
-#[test] // 4.1
+/*#[test] // 4.1
 fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
