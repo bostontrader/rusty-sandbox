@@ -12,7 +12,7 @@ We cannot reasonably control the order of execution of these tests and each test
 */
 
 // Prepare the battlefield for the test.
-fn establish_initial_conditions() {
+/*fn establish_initial_conditions() {
 
     match mysql::Conn::new(C::TEST_CONN_STR) {
         Ok(mut _conn) => {
@@ -275,19 +275,19 @@ fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
         .stdout(predicate::str::contains("Fatal error: No http binding configuration available."))
         .failure();
     Ok(())
-}
+}*/
 
 #[test] // 4.2
 fn bind_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
     // This is necessary to make the test proceed far enough to test what we want.
-    cmd.env(C::CONN_KEY_ENV,C::TEST_CONN_STR)
-        .env(C::DB_KEY_ENV,C::TEST_DB_NAME)
-        .env(C::INIT_KEY_ENV,C::MYSQL_SEED_FILE)
+    //cmd.env(C::CONN_KEY_ENV,C::TEST_CONN_STR)
+    //    .env(C::DB_KEY_ENV,C::TEST_DB_NAME)
+    //    .env(C::INIT_KEY_ENV,C::MYSQL_SEED_FILE)
 
     // This is what we're really testing
-        .env(C::BIND_KEY_ENV,C::TEST_BIND);
+    cmd.env(C::BIND_KEY_ENV,C::TEST_BIND);
 
     cmd.assert()
         .stdout(predicate::str::contains(format!("The HTTP server will bind to [{}], as specified in the environment.", C::TEST_BIND)))
@@ -297,7 +297,7 @@ fn bind_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
     Ok(())
 }
 
-#[test] // 4.2
+/*#[test] // 4.2
 fn bind_with_cli_no_env() -> Result<(), Box<std::error::Error>> {
 
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
@@ -318,3 +318,4 @@ fn bind_with_cli_no_env() -> Result<(), Box<std::error::Error>> {
 
     Ok(())
 }
+*/

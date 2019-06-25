@@ -4,9 +4,9 @@ use bookwerx_core_rust::constants as C;
 use clap::clap_app;
 use std::env;
 use std::error::Error;
-use std::fs::File;
-use std::io::prelude::*;
-use std::path::Path;
+//use std::fs::File;
+//use std::io::prelude::*;
+//use std::path::Path;
 
 fn index(info: web::Path<(String, u32)>) -> impl Responder {
     format!("Hello {}! id:{}", info.0, info.1)
@@ -28,7 +28,7 @@ fn main() {
 
 
     // 2. Obtain a connection string, if available.
-    let mut conn_string;
+    /*let mut conn_string;
     match cli_matches.value_of(C::CONN_KEY_CLI) {
         Some(_x) => {
             println!("Accessing the db via connection string [{}], as set from the command line.", _x);
@@ -165,7 +165,7 @@ fn main() {
         }
 
 
-    }
+    }*/
 
     // 7. Obtain the http server binding, if available.
     let mut bind_string;
