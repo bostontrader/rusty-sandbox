@@ -279,7 +279,7 @@ fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
         .stdout(predicate::str::contains("Fatal error: No http binding configuration available."))
         .failure();
     Ok(())
-} */
+}
 
 #[test] // 4.2
 fn bind_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
@@ -327,3 +327,4 @@ fn bind_with_cli_no_env() -> Result<(), Box<std::error::Error>> {
 
     Ok(())
 }
+*/
