@@ -276,7 +276,7 @@ fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     // Testing nada!
 
     cmd.assert()
-        .stdout(predicate::str::contains("Fatal error: No http binding configuration availablex."))
+        .stdout(predicate::str::contains("Fatal error: No http binding configuration available."))
         .failure();
     Ok(())
 }
