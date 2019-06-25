@@ -48,7 +48,7 @@ fn conn_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     Ok(())
 }
 
-/*#[test] // 1.2
+#[test] // 1.2
 fn conn_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
@@ -177,7 +177,7 @@ fn db_with_cli_with_env() -> Result<(), Box<std::error::Error>> {
     Ok(())
 }
 
-#[test] // 3.1
+/*#[test] // 3.1
 fn init_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
