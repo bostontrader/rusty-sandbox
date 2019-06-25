@@ -28,7 +28,7 @@ fn main() {
 
 
     // 2. Obtain a connection string, if available.
-    /*let mut conn_string;
+    let mut conn_string;
     match cli_matches.value_of(C::CONN_KEY_CLI) {
         Some(_x) => {
             println!("Accessing the db via connection string [{}], as set from the command line.", _x);
@@ -49,7 +49,7 @@ fn main() {
     }
 
     // 3. Obtain a db name, if available.
-    let mut db_name;
+    /*let mut db_name;
     match cli_matches.value_of(C::DB_KEY_CLI) {
         Some(_x) => {
             println!("Using database [{}], as set from the command line.", _x);

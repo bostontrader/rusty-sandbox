@@ -12,7 +12,7 @@ We cannot reasonably control the order of execution of these tests and each test
 */
 
 // Prepare the battlefield for the test.
-/*fn establish_initial_conditions() {
+fn establish_initial_conditions() {
 
     match mysql::Conn::new(C::TEST_CONN_STR) {
         Ok(mut _conn) => {
@@ -48,7 +48,7 @@ fn conn_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
     Ok(())
 }
 
-#[test] // 1.2
+/*#[test] // 1.2
 fn conn_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
     let mut cmd = Command::cargo_bin(C::CARGO_BIN)?;
 
