@@ -260,7 +260,7 @@ fn init_with_valid_seed_file_cli_override_env() -> Result<(), Box<std::error::Er
     Ok(())
 }*/
 
-#[test] // 4.1
+/* #[test] // 4.1
 fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
 
     establish_initial_conditions();
@@ -279,7 +279,7 @@ fn bind_no_cli_no_env() -> Result<(), Box<std::error::Error>> {
         .stdout(predicate::str::contains("Fatal error: No http binding configuration available."))
         .failure();
     Ok(())
-}
+} */
 
 #[test] // 4.2
 fn bind_no_cli_with_env() -> Result<(), Box<std::error::Error>> {
